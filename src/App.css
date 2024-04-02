@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff714a;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Change to column layout on tablets and smaller screens */
+  }
+
+  .custom-cursor {
+    width: 10px;
+    /* Further reduce size for tablets and smaller screens */
+    height: 10px;
+    /* Further reduce size for tablets and smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    /* Change to column layout on mobile devices */
+  }
+
+  .custom-cursor {
+    width: 8px;
+    /* Further reduce size for mobile devices */
+    height: 8px;
+    /* Further reduce size for mobile devices */
+  }
+}

@@ -1,0 +1,186 @@
+.projects {
+    width: 100%;
+    height: 100%;
+    margin-left: 11%;
+    background-color: #282828;
+    padding: 4%;
+    transform: translateY(100%);
+    overflow: hidden;
+}
+
+.scroll-up {
+    animation: scrollUp 1s cubic-bezier(0.25, 0.5, 0.25, 0.5) forwards;
+}
+
+@keyframes scrollUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.projects h1 {
+    color: white;
+}
+
+.projects p {
+    text-align: end;
+    color: gray;
+}
+
+.project {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    height: 540px;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 3%;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+}
+
+.project-card h4 {
+    color: white;
+}
+
+.projectimage img {
+    width: 100%;
+}
+
+.project-title {
+    padding: 2%;
+}
+
+.project-title span {
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+.projectimage {
+    overflow: hidden;
+}
+
+.projectimage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.projectimage:hover img {
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    width: 45%;
+}
+
+.search-input {
+    width: 56%;
+    margin-left: 40%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ff714a;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ff714a;
+}
+
+@media screen and (max-width: 1024px) {
+    .projects {
+        margin-left: 15%;
+        max-width: auto;
+    }
+
+    .project {
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+
+    .project-card {
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        margin-left: 0%;
+        margin-top: 10%;
+    }
+
+    .project {
+        margin-left: 0%;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .projects {
+        margin-top: 15%;
+    }
+
+    .project-card {
+        height: auto;
+    }
+}

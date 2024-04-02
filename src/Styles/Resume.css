@@ -1,0 +1,221 @@
+.resume {
+    width: 100%;
+    margin-left: 11%;
+    background-color: #282828;
+    padding: 4%;
+    transform: translateY(100%);
+}
+
+.resume h1 {
+    color: white;
+}
+
+.resume p {
+    text-align: end;
+    color: gray;
+}
+
+hr {
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.experience {
+    height: 1300px;
+    width: auto;
+    background-color: #282828;
+    padding-top: 2%;
+}
+
+.experience span {
+    font-size: 25px;
+    color: white;
+    border-bottom: 3px solid #ff714a;
+}
+
+.company {
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+}
+
+.date {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 2%;
+    margin-left: -3%;
+}
+
+.title1 {
+    width: 470px;
+}
+
+
+.company h4,
+dt {
+    color: white;
+}
+
+.company dt {
+    font-size: 18px;
+}
+
+.company h5,
+dd {
+    color: #bbbbbb;
+}
+
+.pin {
+    width: 10px;
+    height: 10px;
+    background-color: #ff714a;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pin div {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.expskills {
+    display: flex;
+}
+
+.skills {
+    padding-top: 2%;
+    padding-left: 2%;
+    width: 400px;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.skills span {
+    font-size: 25px;
+    color: white;
+    border-bottom: 3px solid #ff714a;
+}
+
+.skill {
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.skill div {
+    margin-top: 10px;
+}
+
+.side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side h4 {
+    font-size: 18px;
+    color: white;
+}
+
+.side h6 {
+    font-size: 13px;
+    color: gray;
+}
+
+.custom-range {
+    appearance: none;
+    height: 6px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #ff714a;
+}
+
+
+.custom-range::-webkit-slider-thumb {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .resume {
+        margin-left: 20%;
+    }
+
+    .expskills {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resume {
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
+    .expskills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experience,
+    .skills {
+        width: 100%;
+        margin-bottom: 40px;
+        max-width: none;
+    }
+
+    .date {
+        width: auto;
+        padding-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .resume {
+        display: block;
+        margin-top: 17%;
+        height: auto;
+        width: auto;
+    }
+
+    .expskills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experience {
+        display: block;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .skills {
+        display: block;
+        width: 100%;
+        padding: 1%;
+    }
+
+    .pin,
+    .pin div {
+        width: 6px;
+        height: 6px;
+        background-color: #ff714a;
+    }
+}

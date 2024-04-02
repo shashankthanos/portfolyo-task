@@ -1,0 +1,213 @@
+.navbar {
+    height: 100vh;
+    width: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #282828;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+}
+
+.first h1 {
+    font-size: 1.4em;
+    background-color: #282828;
+}
+
+.links {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 1.05em;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    color: white;
+    background-color: #282828;
+    width: 160px;
+    border-bottom: 1px solid #444444;
+    border-top: 1px solid #444444;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.links a.active {
+
+    background-color: #444444;
+    border-right: 3px solid #ff714a;
+}
+
+.links a:hover {
+    background-color: #444444;
+    border-right: 3px solid #ff714a;
+}
+
+.navbar img {
+    border-radius: 8px;
+    height: 80px;
+}
+
+.image {
+    height: 85px;
+    width: 85px;
+    background-image: url(/public/images/john.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    background-position: center -20px;
+}
+
+.para p {
+    text-align: center;
+    margin-top: 50%;
+    font-size: 0.9em;
+    background-color: #282828;
+    color: gray;
+}
+
+.mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+    color: white;
+    padding: 10px 20px;
+    display: none;
+}
+
+.mobile-navbar .image {
+    width: 50px;
+    height: 50px;
+    background-color: #ff714a;
+    border-radius: 50%;
+}
+
+.mobile-navbar .MuiSvgIcon-root {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-navbar {
+        display: none;
+    }
+
+    .MuiSvgIcon-root {
+        margin-right: 25px;
+    }
+
+    .navbar {
+        top: 0%;
+        left: 0%;
+        height: auto;
+        width: 200px;
+        display: block;
+        z-index: 1000;
+        position: fixed;
+    }
+
+    .navbar .first {
+        padding: 20px;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar .links a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #444444;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar .links a.active,
+    .navbar .links a:hover {
+        background-color: #444444;
+    }
+
+    .navbar .para {
+        text-align: center;
+        padding: 20px;
+        color: gray;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .MuiSvgIcon-root {
+        margin-right: 25px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar.mobile-open {
+        display: block;
+        position: fixed;
+        top: 9%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #282828;
+        z-index: 999;
+        overflow-y: auto;
+        padding-top: 60px;
+        transition: transform 0.3s ease;
+        width: 200px;
+        height: 800px;
+    }
+
+    .navbar .first {
+        padding: 20px;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar .links a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #444444;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar .links a.active,
+    .navbar .links a:hover {
+        background-color: #444444;
+    }
+
+    .navbar .para {
+        text-align: center;
+        padding: 20px;
+        color: gray;
+    }
+}
